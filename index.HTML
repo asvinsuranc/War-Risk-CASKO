@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страхування авто від воєнних ризиків</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 20px 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #475569;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .card .badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: var(--accent);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .contact-section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 24px;
+    }
+
+    .contact-section h3 {
+      margin-bottom: 12px;
+    }
+
+    .phone-list {
+      margin: 12px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .phone-list a {
+      color: var(--accent);
+      text-decoration: none;
+      display: block;
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Шапка сайту -->
+    <header>
+      <h1>Ваш автомобіль може піти з вами в укриття? </h1>
+      <h3>Якщо ні — подбайте про страховий захист свого автомобіля від ракет, дронів та уламків!</h3>
+    </header>
+
+    <!-- Картки продуктів -->
+    <div class="cards-grid">
+      
+      <!-- ТАС -->
+      <div class="card">
+        <div>
+          <h2>СГ «ТАС»</h2>
+          <span class="badge">Лідер ринку №1</span>
+          <ul>
+            <li>Франшиза 0% при пошкодженні</li>
+            <li>Франшиза 5% при знищенні</li>
+            <li>Найнижчий тариф: від 1,77%</li>
+            <li>Старт дії через 5 днів</li>
+          </ul>
+        </div>
+        <button class="btn" onclick="scrollToContact('СГ ТАС')">Обрати ТАС</button>
+      </div>
+
+      <!-- Арсенал -->
+      <div class="card">
+        <div>
+          <h2>СК «Арсенал»</h2>
+          <span class="badge">Програма «Патронус»</span>
+          <ul>
+            <li>Покриває ракети, БПЛА, ППО/ПРО</li>
+            <li>Тариф 1,99% від вартості</li>
+            <li>Франшиза: 5% пошкодження / 10% тотал</li>
+            <li>Евакуація авто у подарунок (до 5000 грн)</li>
+          </ul>
+        </div>
+        <button class="btn" onclick="scrollToContact('СК Арсенал Патронус')">Обрати Арсенал</button>
+      </div>
+
+      <!-- Вусо -->
+      <div class="card">
+        <div>
+          <h2>СК «Вусо» </h2>
+          <span class="badge">Без огляду авто</span>
+          <ul>
+            <li>Оформлення без огляду та зносу</li>
+            <li>Страхова сума 400 тис. грн — 8500 грн</li>
+            <li>Страхова сума 800 тис. грн — 16500 грн</li>
+            <li>Страхова сума 1.2 млн грн — 25000 грн</li>
+          </ul>
+        </div>
+        <button class="btn" onclick="scrollToContact('СК Вусо')">Обрати Вусо</button>
+      </div>
+
+    </div>
+    <div>
+      <h2>За оцінками аналітиків (зокрема Kyiv School of Economics / KSE Institute та профільних експертів ринку), 
+        загальна кількість пошкоджених та знищених цивільних автомобілів в Україні станом на 2024–2026 роки становить понад 210 000 одиниць</h2>
+    </div>
+
+    <!-- Секція контактів та дії -->
+    <div class="contact-section" id="contact">
+      <h2 id="selected-title">Надішліть техпаспорт для розрахунку</h2>
+      <p>Перейти до оформлення полісу </p>
+      
+      <div class="phone-list">
+        <a href="tel:+380 97 730 77 12">📞 +380 97 730-77-12</a>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <a href="https://t.me/acvinsuranc" class="btn" style="background-color: #229ED9; margin-bottom: 8px;">Надіслати техпаспорт у Telegram</a>
+        <a href="viber://chat?number=%2B 380977307712" class="btn" style="background-color: #7360F2;">Надіслати техпаспорт у Viber</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function scrollToContact(companyName) {
+      document.getElementById('selected-title').innerText = 'Розрахунок для ' + companyName + ': надішліть техпаспорт';
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
